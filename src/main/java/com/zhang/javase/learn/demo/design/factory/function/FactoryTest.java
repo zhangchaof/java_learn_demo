@@ -9,7 +9,7 @@ import com.zhang.javase.learn.demo.design.factory.Fruit;
  */
 public class FactoryTest {
     public static void main(String[] args) {
-        //不同工厂，要不同部件不要指定特定工厂
+        //不同工厂，要不同部件要指定特定工厂
         Factory factory = new BananaFactory();
         Fruit apple = factory.getFruit("appple");
         System.out.println("apple = " + apple);
