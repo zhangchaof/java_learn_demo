@@ -11,9 +11,10 @@ public class ReverseInt {
     public static void main(String[] args) {
         System.out.println("reverseInt(158) = " + reverseInt(158));
         System.out.println("reverseNoString(158) = " + reverseNoString(-158));
-        int[] arr = {1, 2,4,5,7};
+        int[] arr = {1, 2, 4, 5, 7};
         int[] ints = twoSum(arr, 7);
         System.out.println("ints = " + ints[0] + "," + ints[1]);
+        System.out.println("(Integer.MAX_VALUE + 1) = " + (Integer.MAX_VALUE + 1));
 
     }
 
@@ -44,19 +45,18 @@ public class ReverseInt {
     }
 
     /**
-     *
      * @param nums
      * @param target
      * @return
      */
     public static int[] twoSum(int[] nums, int target) {
         int len = nums.length;
-        Map<Integer,Integer> map = new HashMap<>();
-        for(int i = 0;i < len; i++ ) {
-            if(map.containsKey(nums[i])) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < len; i++) {
+            if (map.containsKey(nums[i])) {
                 return new int[]{i, map.get(nums[i])};
             }
-            map.put(target-nums[i],i);
+            map.put(target - nums[i], i);
         }
         return null;
     }
@@ -65,6 +65,7 @@ public class ReverseInt {
      * 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
      * 输出：7 -> 0 -> 8
      * 原因：342 + 465 = 807
+     *
      * @param l1
      * @param l2
      * @return
@@ -77,13 +78,23 @@ public class ReverseInt {
         }
         return null;
     }
+
     public static class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
 }
 
 
