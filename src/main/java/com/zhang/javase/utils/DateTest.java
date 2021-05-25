@@ -15,6 +15,7 @@ public class DateTest {
 
         dateToLocalDate();
         System.out.println("getDate() = " + getDate());
+        System.out.println("LocalDate.now().getDayOfYear() = " + LocalDate.now().getDayOfYear());
     }
 
     public static LocalDate getDate() {

@@ -58,7 +58,9 @@ public class ClassUtil {
         return classList;
     }
 
-    // 获取指定包名下的所有类（可根据注解进行过滤）
+    /**
+     * 获取指定包名下的所有类（可根据注解进行过滤）
+     */
     public static List<Class<?>> getClassListByAnnotation(String packageName, Class<? extends Annotation> annotationClass) {
         List<Class<?>> classList = new ArrayList<Class<?>>();
         try {

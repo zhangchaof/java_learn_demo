@@ -57,7 +57,6 @@ public class Test {
         for (PropertyDescriptor pd : pds) {
             Method setMethod = pd.getWriteMethod();
             String fieldName = pd.getName();
-
             if ("name".equalsIgnoreCase(fieldName)) {
                 setMethod.invoke(bean, properties.get(fieldName));
             } else if ("age".equalsIgnoreCase(fieldName)){
